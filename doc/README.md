@@ -37,3 +37,22 @@ He creado el directorio del proyecto y le asignado los permisos
 He creado el fichero .env con su contenido
 
 ![](assets/20260116_132249_image.png)
+
+
+Y lo he copiado en /vagrant/config para poder copiarlo al crear la máquina a través del provisional
+
+
+He iniciado el entorno virtual
+
+![](assets/20260116_132954_image.png)
+
+
+
+Y he instalado las dependencias para el proyecto
+
+![](assets/20260116_133216_image.png)
+
+
+He creado los ficheros de la aplicación, los he copiado a mi ordenador para poder editarlos mas comodamente y luego los he vuelto a copiar dentro de la máquina
+
+![](assets/20260116_135500_image.png)

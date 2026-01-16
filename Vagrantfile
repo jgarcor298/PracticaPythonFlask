@@ -30,7 +30,12 @@ Vagrant.configure("2") do |config|
       pip3 install pipenv
       PATH=$PATH:/home/$USER/.local/bin
       pip3 install python-dotenv
-
+      cp /vagrant/config/.env /var/www/appp
+      cd /var/www/app
+      pipenv shell
+      pipenv install flask gunicorn
+      cp /vagrant/config/applicacion.py /var/www/app/
+      cp /vagrant/config/wsgi.py /var/www/app/
 
     SHELL
     
