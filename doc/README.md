@@ -67,48 +67,37 @@ Sacamos la ruta desde donde se ejecuta gunicorn
 
 ![](assets/20260116_142419_image.png)
 
-
 He lanzado y comprobado el que se ha lanzado nginx
 
 ![](assets/20260121_192940_image.png)
-
 
 He creado el fichero flask_app.service en mi carpeta /vagrant/config/ y lo he copiado en la máquina Vagrant
 
 ![](assets/20260121_193502_image.png)
 
-
-
 Despues he lanzado el servicio que he creado
 
 ![](assets/20260121_194834_image.png)
-
 
 Con nano he creado el fichero app.conf con la siguiente configuración
 
 ![](assets/20260121_195116_image.png)
 
-
 He creado el enlace simbólico del archivo de sitios webs
 
 ![](assets/20260121_195237_image.png)
-
 
 He comprobado que la configuración de nginx esta correcta
 
 ![](assets/20260121_195342_image.png)
 
-
 He modificado el fichero /etc/hosts de mi máquina anfitriona
 
 ![](assets/20260121_195607_image.png)
 
-
-Y he comprobado que funciona 
+Y he comprobado que funciona
 
 ![](assets/20260121_195636_image.png)
-
-
 
 ## Tarea de ampliación
 
@@ -116,73 +105,53 @@ Para la tarea de ampliación he partido de la máquina Vagrant como la tenía an
 
 ![](assets/20260121_200109_image.png)
 
-
-
-He creado el fichero .env con esta configuración 
+He creado el fichero .env con esta configuración
 
 ![](assets/20260121_200431_image.png)
-
 
 He creado y activado el entorno virtual
 
 ![](assets/20260121_200537_image.png)
 
-
 He instalado las dependencias del proyecto
 
 ![](assets/20260121_200703_image.png)
-
 
 He probado la aplicación con Flask
 
 ![](assets/20260121_200746_image.png)
 
-
-
 ![](assets/20260121_200801_image.png)
-
 
 He probado que funciona con gunicorn
 
 ![](assets/20260121_200857_image.png)
 
-
-
 ![](assets/20260121_200911_image.png)
-
 
 He comprobado cual es la ruta del proyecto con gunicorn
 
 ![](assets/20260121_200956_image.png)
 
-
-
 He creado el servicio systemd para la app
 
 ![](assets/20260121_201333_image.png)
-
 
 Y he lanzado el servicio
 
 ![](assets/20260121_201641_image.png)
 
-
 He configurado la nueva app en nginx
 
 ![](assets/20260121_201828_image.png)
-
 
 He creado el enlace simbólico y reiniciado nginx
 
 ![](assets/20260121_201910_image.png)
 
-
-
 He configurado el fichero /etc/hosts en mi máquina anfitriona
 
 ![](assets/20260121_202040_image.png)
-
-
 
 Y he comprobado que funciona
 
