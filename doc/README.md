@@ -157,4 +157,33 @@ He comprobado cual es la ruta del proyecto con gunicorn
 
 
 
-He creado el servicio systemd para hacer
+He creado el servicio systemd para la app
+
+![](assets/20260121_201333_image.png)
+
+
+Y he lanzado el servicio
+
+![](assets/20260121_201641_image.png)
+
+
+He configurado la nueva app en nginx
+
+![](assets/20260121_201828_image.png)
+
+
+He creado el enlace simbólico y reiniciado nginx
+
+![](assets/20260121_201910_image.png)
+
+
+
+He configurado el fichero /etc/hosts en mi máquina anfitriona
+
+![](assets/20260121_202040_image.png)
+
+
+
+Y he comprobado que funciona
+
+![](assets/20260121_202053_image.png)
