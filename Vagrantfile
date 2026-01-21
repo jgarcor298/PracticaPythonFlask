@@ -11,30 +11,36 @@ Vagrant.configure("2") do |config|
     server.vm.network "private_network", ip: "192.168.18.10"
     server.vm.network "forwarded_port", guest: 8080, host: 8080    
 
-    # Comandos como root
     server.vm.provision "shell", inline: <<-SHELL
       apt update
       apt upgrade -y
-      apt install -y nginx gunicorn
-      apt-get update && sudo apt-get install -y python3-pip
-      sudo mkdir -p /var/www/app
-      sudo chown -R $USER:www-data /var/www/app
-      sudo chmod -R 775 /var/www/app
+      apt install -y python3-pip nginx
+
+      systemctl enable nginx
+      systemctl start nginx
+
+      mkdir -p /var/www/app
+      chown -R vagrant:www-data /var/www/app
+      chmod -R 775 /var/www/app
 
 
 
     SHELL
 
-    # Comandos como vagrant
     server.vm.provision "shell", privileged: false, inline: <<-SHELL
-      pip3 install pipenv
-      PATH=$PATH:/home/$USER/.local/bin
-      pip3 install python-dotenv
-      cp /vagrant/config/.env /var/www/appp
+     export PATH="$HOME/.local/bin:$PATH"
+      echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+
+      pip3 install --user pipenv
+      pip3 install --user python-dotenv
+
       cd /var/www/app
-      pipenv shell
+
+      cp /vagrant/config/.env /var/www/app/.env
+
       pipenv install flask gunicorn
-      cp /vagrant/config/applicacion.py /var/www/app/
+
+      cp /vagrant/config/application.py /var/www/app/
       cp /vagrant/config/wsgi.py /var/www/app/
 
     SHELL
